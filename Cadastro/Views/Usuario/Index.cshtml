@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Cadastro.Models.Usuario>
+
+
+<h2 class="mb-4">Usuarios Cadastrados</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Data de nascimento</th>
+            <th>Sexo</th>
+            <th>Email</th>
+            <th>Endereco</th>
+            <th>NRua</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var usuario in Model)
+        {
+            <tr>
+                <td>@usuario.IdUsuario</td>
+                <td>@usuario.Nome</td>
+                <td>@usuario.DataNasc.ToString("dd/MM/yyyy")</td>
+                <td>@usuario.TipoSexo</td>
+                <td>@usuario.Email</td>
+                <td>@usuario.Endereco</td>
+                <td>@usuario.NRua</td>
+            </tr>
+        }
+    </tbody>
+</table>
